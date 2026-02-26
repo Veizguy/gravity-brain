@@ -1,0 +1,36 @@
+# Obsidian specific
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/indexed-indices/
+
+# OS and common files
+.DS_Store
+Thumbs.db
+*.log
+
+# Large binary files (to avoid bloating git)
+*.pdf
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+*.mp3
+*.wav
+
+# Node/Python artifacts (if any)
+__pycache__/
+node_modules/
+.venv/
+env/
+
+# Secrets
+credentials.json
+token.json
+.env
+*.pem
+*.key
+auth.json

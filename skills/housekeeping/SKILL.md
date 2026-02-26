@@ -1,11 +1,17 @@
 ---
 name: "Housekeeping"
-description: "Læser, vurderer og sorterer automatisk filer i indbakken (vault/inbox/raw). Opgaver flyttes til 'tasks/', noter flyttes til 'daily/'."
+description: "Læser, vurderer og sorterer automatisk filer i indbakken (vault/inbox/raw). Opgaver flyttes til 'tasks/', noter flyttes til 'daily/'. KØRES KUN ON-DEMAND."
 ---
 
-# Housekeeping Skill
+> [!IMPORTANT]
+> **SUPERSEDED**: Denne skill er ved at blive erstattet af workflowet `/process-inbox.md`. Brug venligst workflowet i stedet for denne skill direkte for at sikre den nyeste logik.
+
+# Housekeeping Skill (On-Demand Only)
 
 Denne skill bruges til intelligent at sortere noter og opgaver i dit Obsidian vault. Du (agenten) skal læse indholdet og bruge din dømmekraft til at bestemme destinationen.
+
+> [!NOTE]
+> Denne skill skal kun køres når brugeren eksplicit anmoder om det. Baggrunds-automatisering er deaktiveret for at spare tokens.
 
 ## Instruktioner til Agent
 
@@ -28,5 +34,10 @@ Når du bliver bedt om at fuldføre Housekeeping-opgaven, skal du gøre følgend
         - **Noter** flyttes til `vault/daily/`.
     - *Vigtigt:* Før du flytter en fil, tjek om filnavnet allerede findes i destinationen. Er det tilfældet, omdøb filen automatisk (f.eks. tilføj et `_1` suffix) så du ikke overskriver eksisterende data.
 
-4.  **Rapportér:**
-    - Afslut opgaven med en kort, præcis status på hvor mange filer du læste, og hvilke der blev vurderet som hhv. opgaver og noter.
+4.  **Rapportér & Log:**
+    - Afslut opgaven med en kort, præcis status på hvor mange filer du læste.
+    - **Log til Daily Log:** Find dagens log og tilføj en række til `# Antigravity log`:
+        - **Job**: `Housekeeping`
+        - **Beskrivelse**: `Sorterede X filer til tasks/ og daily/`.
+        - **Success**: `Ja`.
+        - **Token forbrug**: Estimat (f.eks. `~1.500 tokens`).

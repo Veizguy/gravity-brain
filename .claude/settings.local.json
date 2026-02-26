@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/mikkelfeld/Downloads/**)",
+      "Bash(find ~/Downloads -type f -mtime -30 -exec ls -lh {} ;)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,11 @@
+# Exclude Python virtual environments
+**/venv/
+**/__pycache__/
+
+# Exclude archived data files
+inbox/processed/archive/
+inbox/processed/files/
+outbox/processed/
+
+# Exclude system files
+.DS_Store

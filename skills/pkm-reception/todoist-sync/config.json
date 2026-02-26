@@ -1,0 +1,11 @@
+{
+    "api_token": "13808026dbe18554229da0771bc61d8ed9847530",
+    "default_project_id": null,
+    "scan_paths": [
+        "tasks",
+        "daily",
+        "daily-logs"
+    ],
+    "sync_tags": true,
+    "sync_status": true
+}
